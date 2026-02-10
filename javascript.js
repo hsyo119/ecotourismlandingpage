@@ -4,6 +4,7 @@ const message = document.getElementById("message");
 
 const nameInput = document.getElementById("name");
 const ageInput = document.getElementById("age");
+const peopleInput = document.getElementById("people"); 
 const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
 const dateInput = document.getElementById("date");
@@ -16,6 +17,7 @@ form.addEventListener("submit", function(e) {
   const data = {
     name: nameInput.value,
     age: ageInput.value,
+    people: peopleInput.value,
     email: emailInput.value,
     phone: phoneInput.value,
     date: dateInput.value,
@@ -24,8 +26,12 @@ form.addEventListener("submit", function(e) {
   };
 
   console.log("Reservation Data:", data);
+ // Show confirmation message
+  message.textContent = `Thank you! Your reservation request for ${data.people} ${
+    data.people === "1" ? "person" : "people"
+  } was sent.We will contact sooner.`;
 
-  message.textContent = "Thank you! Your reservation request was sent (Demo).";
+  // Reset form
   form.reset();
 });
 
