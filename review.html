@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Your Review</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="review.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<header class="bg-white shadow p-4">
+  <div class="max-w-5xl mx-auto flex justify-between">
+    <h1 class="font-bold text-green-600 text-xl">EcoTrip Reviews</h1>
+    <a href="index.html" class="text-green-600">Home</a>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto bg-white p-6 mt-6 rounded-xl shadow">
+  <h2 class="text-2xl font-bold mb-4">Submit Your Review</h2>
+
+  <form id="reviewForm" class="grid gap-4">
+    <input id="reviewerName" placeholder="Your Name" class="border p-2 rounded" required>
+    <input id="nationality" placeholder="Nationality" class="border p-2 rounded" required>
+    <input id="email" type="email" placeholder="Email" class="border p-2 rounded" required>
+    <textarea id="reviewText" placeholder="Your Review" class="border p-2 rounded" required></textarea>
+    
+    <label for="rating">Rating:</label>
+    <select id="rating" class="border p-2 rounded" required>
+      <option value="">Select Rating</option>
+      <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+      <option value="4">⭐⭐⭐⭐ Good</option>
+      <option value="3">⭐⭐⭐ Average</option>
+      <option value="2">⭐⭐ Poor</option>
+      <option value="1">⭐ Very Poor</option>
+    </select>
+
+    <button class="bg-green-600 text-white p-2 rounded hover:bg-green-700">
+      Submit Review
+    </button>
+  </form>
+
+  <p id="reviewMessage" class="mt-4 text-green-600 font-semibold"></p>
+</main>
+
+</body>
+</html>

@@ -53,3 +53,4 @@ function toggleText(mountain, button) {
     button.textContent = "Read More";
   }
 }
+
