@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="EcoTrip">
+<trk><name>Mount Hiruzen Trail</name><trkseg>
+<trkpt lat="35.150" lon="134.000"></trkpt>
+<trkpt lat="35.152" lon="134.005"></trkpt>
+<trkpt lat="35.155" lon="134.010"></trkpt>
+<trkpt lat="35.158" lon="134.015"></trkpt>
+<trkpt lat="35.160" lon="134.020"></trkpt>
+<trkpt lat="35.163" lon="134.025"></trkpt>
+<trkpt lat="35.165" lon="134.030"></trkpt>
+<trkpt lat="35.168" lon="134.035"></trkpt>
+<trkpt lat="35.170" lon="134.040"></trkpt>
+</trkseg></trk>
+</gpx>

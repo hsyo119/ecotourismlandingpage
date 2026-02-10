@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Okayama Eco Tour</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- GPX -->
+  <script src="https://unpkg.com/leaflet-gpx/gpx.js"></script>
+
+  <script src="javascript.js"></script>
+
+</head>
+
+
+<body class="bg-white text-gray-800">
+
+<!-- Header -->
+<header class="sticky top-0 bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+    <!-- Logo -->
+    <h1 class="text-xl font-bold text-green-600">EcoTrip Okayama</h1>
+
+    <!-- Navigation Menu -->
+    <nav class="flex gap-6 font-semibold">
+      <a href="index.html" class="hover:text-green-600">Home</a>
+      <a href="#mountains" class="hover:text-green-600">Mountains</a>
+      <a href="reservation.html" class="hover:text-green-600">Reservation</a>
+    </nav>
+
+    <!-- Button -->
+    <a href="reservation.html" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700">
+      Reserve
+    </a>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee')] bg-cover bg-center">
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="relative max-w-4xl mx-auto text-center text-white pt-32">
+    <h2 class="text-4xl font-bold mb-4">LET'S GO HIKING IN OKAYAMA</h2>
+    <h5 class="text-4xl font-bold mb-4">LEAVE ONLY FOOTPRINTS</h5>
+    <p>🥾 Hiking Trail</p>
+    <p>🧑‍🤝‍🧑 Youth Travelers</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mountains Section -->
+<section id="mountains" class="max-w-7xl mx-auto p-6">
+  <h3 class="text-2xl font-bold mb-4">Popular Eco Hiking Spots</h3>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="images/kuma.jpg" alt="Mount Kuma eco hiking spot" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h4 class="font-bold text-lg">Mount Kuma</h4>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="Mount Nagi eco hiking spot" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h4 class="font-bold text-lg">Mount Nagi</h4>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="border rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Mount Hiruzen eco hiking spot" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h4 class="font-bold text-lg">Mount Hiruzen</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Mountain Details Section -->
+<section class="max-w-6xl mx-auto p-6">
+  <h2 class="text-2xl font-bold mb-6">INTRODUCTION</h2>
+
+  <!-- Mount Kuma-->
+  <div class="bg-white p-6 rounded-xl shadow mb-6">
+    <h3 class="text-xl font-bold text-green-600">Mount Kuma</h3>
+    <p><b>Location:</b> Akaiwa, Okayama</p>
+    <p><b>Height:</b> 508 meters</p>
+    <p><b>Difficulty:</b> Easy to Medium</p>
+	  <!-- Short intro -->
+    <p>
+    <span id="kumaShort">
+      Mount Kumayama (熊山, Kumayama) is a sacred mountain in Akaiwa, Okayama Prefecture.
+    </span>
+
+    <!-- Full intro hidden -->
+    <span id="kumaFull" class="hidden">
+ Mount Kumayama (熊山, Kumayama) is a sacred and historically significant mountain in Akaiwa, Okayama Prefecture, rising to about 508 meters above sea level.
+<br>
+        🪨 Ancient and Religious Significance
+<br>
+Mount Kumayama has been regarded as a holy mountain since ancient times. On its summit is a mysterious stone structure known as the Kumayama ruins (熊山遺跡), which resembles a three-tiered stepped platform — sometimes likened to a miniature pyramid — and is a designated National Historic Site of Japan.
+
+Archaeological evidence suggests that the main stone structure was built in the early Nara period (710–794 AD) atop an even older sacred rock site (iwakura), where religious practices may have occurred since the Yayoi period (before 300 BC).
+
+This stone platform is composed of stacked granite blocks forming a stepped base and three tiers. Square niches on each side of the second tier likely held Buddhist statues or objects. A ceramic container once found inside — now kept at Tenri University — contained a leather scroll, though its contents were lost in 1937.
+
+While the exact origin and purpose remain debated, some scholars compare the structure to early Buddhist stupas (such as the Zutō in Nara and Dotō in Osaka), and local legend even attributes its construction to the Chinese monk Ganjin, famed for introducing Buddhism to Japan.
+<br>
+🛕 Temple and Religious Traditions
+<br>
+Historical records also indicate that a temple named Ryōzen‑ji once existed near the ruins and claimed ties to Ganjin’s traditions. Remains of foundations related to temple buildings and other stone structures have been found on the slopes of Kumayama, indicating a broader religious complex that thrived through early Japanese history.
+
+Today, traces of ancient spiritual practice and Buddhist history remain at Mount Kumayama, making it both a destination for hikers and a place of cultural and historical interest.
+
+    </span>
+    </p>
+    <button class="mt-2 text-green-600 font-semibold" onclick="toggleText('kuma', this)">Read More</button>
+  </div>
+
+  <!-- Mount Nagi -->
+  <div class="bg-white p-6 rounded-xl shadow mb-6">
+    <h3 class="text-xl font-bold text-green-600">Mount Nagi</h3>
+    <p><b>Location:</b> Okayama</p>
+    <p><b>Height:</b> 1,212 meters</p>
+    <p><b>Difficulty:</b> Medium</p>
+    
+        <p>
+        <span id="nagiShort" class="mt-2">
+            Mount Nagi (那岐山 / Nagisan) is a scenic mountain on the border of Okayama and Tottori Prefectures.
+        </span>
+
+    <span id="nagiFull" class="hidden">
+Mount Nagi (那岐山 / Nagisan) is a mountain at the border of Nagi in Okayama Prefecture and Chizu in Tottori Prefecture in Japan. It rises to about 1,255 meters and is one of the prominent peaks in the Chūgoku Mountains region.
+<br>
+🌿 Nature & Geography
+<br>
+Mt. Nagi is part of the Hyōnosen‑Ushiroyama‑Nagisan Quasi‑National Park, a protected area known for its rich natural environment.
+
+It offers a 360° panoramic view from the summit — on clear days you can see far across Okayama, Tottori, and even toward the Sea of Japan and Shikoku.
+
+The mountain displays beautiful seasonal scenery — from fresh greens in spring to vivid autumn foliage and snow‑capped winter landscapes.
+<br>
+📜 Legends & Name Origin
+<br>
+There are two interesting stories behind the name Nagi:
+
+Mythological Origin
+The name is sometimes linked to the Japanese deities Izanagi no Mikoto and Izanami no Mikoto, who are said in legend to have descended to this mountain.
+
+“Mountain That Cried” Story
+Another explanation comes from wordplay on naku (泣く, “to cry”). It’s said that the mountain “cried” because it was lower in height than nearby Mount Ushiro.
+
+These stories reflect both mythical tradition and local wordplay, tying cultural meaning to the landscape.
+<br>
+🥾 Hiking & Cultural Use
+<br>
+Mt. Nagi has multiple climbing routes from Nagi town, offering choices for beginners and intermediate hikers alike.
+
+A full climb and descent typically takes about 3.5–4.5 hours for most hikers, with some routes involving scenic ridges and side trails.
+
+Rocks and formations around the mountain historically served as a center for Shugendō, a traditional Japanese mountain ascetic practice blending Shinto and Buddhist beliefs.
+
+    </span>
+    </p>
+    <button class="mt-2 text-green-600 font-semibold" onclick="toggleText('nagi', this)">Read More</button>
+  </div>
+
+
+<!-- Mount Hiruzen -->
+  <div class="bg-white p-6 rounded-xl shadow mb-6">
+    <h3 class="text-xl font-bold text-green-600">Mount Hiruzen</h3>
+    <p><b>Location:</b> Okayama</p>
+    <p><b>Height:</b> 1,205 meters</p>
+    <p><b>Difficulty:</b> Easy to Medium</p>
+    <p>
+    <span id="hiruzenShort" class="mt-2">
+      Mount Hiruzen (蒜山) is a popular highland area with scenic views and rich cultural history.
+    </span>
+
+    <span id="hiruzenFull" class="hidden">
+      Mount Hiruzen (蒜山) refers to both a mountain area and the Hiruzen Highlands in northern Maniwa City, Okayama Prefecture, near the border with Tottori Prefecture. It’s part of the Chūgoku Mountains and an important natural and cultural region in western Japan .
+<br>
+📜 Ancient Settlement
+<br>
+People lived in the Hiruzen area since prehistoric times. Archaeological remains from the Jōmon period (around 14,000–300 BCE) have been found in the Hiruzen Basin, showing long-term human settlement .
+
+During later periods, such as the Yayoi period (300 BCE–250 CE) and the Kofun period (around the 5th century), the region was increasingly populated. Burial mounds (kofun) from the 6th century can still be seen near Hiruzen, and artifacts from these sites are exhibited in local museums .
+<br>
+🌋 Volcanic Formation
+<br>
+Mount Hiruzen is part of a volcanic belt associated with Mt. Daisen. Its “three peaks” — Mt. Kamihiruzen, Mt. Nakahiruzen, and Mt. Shimohiruzen — were formed by volcanic activity hundreds of thousands of years ago. The volcanic soil and landscape shaped the ecology and human use of the region .
+
+A large lake once existed where the Hiruzen Plateau now lies, created when volcanic debris blocked a river 350,000 years ago. Over time that lake dried up and became fertile land, where people later established settlements .
+<br>
+🌾 Cultural and Agricultural History
+<br>
+For many centuries, the people who lived around Hiruzen developed ways to live with the environment. Controlled burns called yamayaki were used to manage grasslands — promoting new grass for livestock and maintaining the open highland landscape. This practice helped support traditional grazing and agricultural lifestyles and remains a cultural tradition today .
+
+In more recent history, the Hiruzen Highlands became known for:
+
+Jersey cows and dairy products, after cattle were introduced in the 1950s
+
+Resort and tourism development, as the highlands became a popular destination for hiking, cycling, camping, and skiing
+
+Local crafts and traditional dance (Ōmiya Odori), part of the cultural heritage of the area
+<br>
+🏞️ Cultural Landscape
+<br>
+The Hiruzen Highlands are known for their grasslands, seasonal wildflowers, and scenic views of the Three Peaks. The natural environment and human culture are deeply connected — people historically depended on local plant and animal life, and these traditions continue in community festivals and practices that reflect centuries of coexistence with nature .
+
+Today, local museums in Hiruzen preserve and showcase this rich history, including ancient artifacts and exhibits on traditional agriculture, crafts, and local culture .
+    
+    </span>
+    </p>
+    <button class="mt-2 text-green-600 font-semibold" onclick="toggleText('hiruzen', this)">Read More</button>
+  </div>
+</section>
+
+
+<!-- Map & Route Section -->
+<section class="max-w-7xl mx-auto p-6">
+  <h2 class="text-2xl font-bold mb-4">Hiking Routes</h2>
+
+  <!-- Route Selector -->
+  <select id="routeSelect" class="border p-2 rounded mb-4">
+    <option value="">Select Hiking Route</option>
+    <option value="kuma">Mount Kuma Route</option>
+    <option value="nagi">Mount Nagi Route</option>
+    <option value="hiruzen">Mount Hiruzen Route</option>
+  </select>
+
+  <div id="map" class="w-full h-[400px] rounded-xl shadow"></div>
+
+  <!-- Distance Info -->
+  <div class="mt-4 bg-green-50 p-4 rounded">
+    <p><b>Distance:</b> <span id="distance">0 km</span></p>
+    <p><b>Estimated Hiking Time:</b> <span id="time">0 hours</span></p>
+  </div>
+</section>
+
+<!-- Map Script -->
+<script src="map.js"></script>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center p-4">
+  © 2026 EcoTrip Okayama - International Business Project
+</footer>
+
+</body>
+</html>
